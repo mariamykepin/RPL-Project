@@ -1,0 +1,149 @@
+:root{
+    --primary: rgb(29, 221, 189);
+    --bgDark: rgb(12, 12, 12);
+    --white: rgb(250, 250, 250);
+    --secondary: rgb(0, 59, 50);
+    --bgLight: rgb(190, 181, 181);
+    --daeblue : rgb(44, 77, 183); 
+    --daepink : rgb(236, 70, 245);
+    --daegreen : rgb(165, 254, 166);
+    }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+section{
+    background-color: var(--bgDark);
+}
+
+section.conme{
+    width: 100vw;
+    text-align: center;
+}
+
+
+h1{
+    color : var(--white);
+    background-color: transparent;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 4rem;
+}
+
+section.formm{
+    /*max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;*/
+    background-color: var(--bgDark); /* Menyesuaikan warna latar belakang */
+    display: flex;
+    align-items: center; /* Menengahkan item dalam vertikal */
+    justify-content: center; /* Menengahkan item dalam horizontal */
+    padding-bottom: 4em;
+}
+
+img.hey{
+    display:flex;
+    justify-self: left;
+    margin-right: 10em;
+    margin-top: 3em;
+    width: 420px; /* Lebar gambar 200 piksel */
+    height: 300px; /* Tinggi gambar 150 piksel */
+}
+
+form{
+    align-items: center;
+    justify-items: right;
+    padding-top: 3%;
+    padding-bottom: 7%;
+    margin-left: 30em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 500px; /* Menyesuaikan lebar input dengan textarea */
+    padding: 10px; /* Memberikan padding */
+    margin-bottom: 10px; /* Memberikan jarak antar input */
+    border: 3px solid var(--daeblue); /* Memberikan border */
+    border-radius: 5px; /* Memberikan border radius */
+    font-size: 16px; /* Ukuran font */
+    resize: none; /* Mencegah textarea untuk diresize */
+    background-color: transparent; /* Membuat warna latar belakang transparan */
+    position: relative; /* Mengatur posisi relatif untuk kontainer input */
+    color: var(--daegreen); /* Mengatur warna teks menjadi putih */
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: white; /* Mengatur warna placeholder menjadi putih */
+}
+
+input[type="text"] + label,
+input[type="email"] + label,
+textarea + label {
+    position: absolute; /* Mengatur posisi absolut untuk label */
+    top: 15px; /* Mengatur posisi atas label */
+    left: 15px; /* Mengatur posisi kiri label */
+
+    color: #999; /* Warna label */
+    pointer-events: none; /* Mengabaikan interaksi mouse pada label */
+    transition: all 0.3s ease; /* Transisi perubahan properti */
+}
+input[type="text"]:focus + label,
+input[type="email"]:focus + label,
+textarea:focus + label {
+    /*top: -15px;
+    left: 10px;
+    font-size: 12px;
+    color: #333;*/
+    top: -15px; /* Menggerakkan label ke atas saat input dalam fokus */
+    left: 10px; /* Menyesuaikan posisi label saat input dalam fokus */
+    font-size: 12px; /* Mengurangi ukuran font saat input dalam fokus */
+    color: var(--daeblue); /* Warna label saat input dalam fokus */
+    
+}
+
+input[type="submit"] {
+    width: 500px; /* Lebar tombol Send */
+    height: 60px;
+    padding: 10px; /* Memberikan padding */
+    border: none; /* Menghapus border */
+    border-radius: 5px; /* Memberikan border radius */
+    background-color: var(--daegreen); /* Warna latar belakang */
+    color: var(--bgDark); /* Warna teks */
+    font-size: 20px; /* Ukuran font */
+    cursor: pointer; /* Mengubah kursor saat dihover */
+    transition: background-color 0.3s ease; /* Transisi perubahan warna latar belakang */
+}
+
+input[type="submit"]:hover {
+    background-color: var(--daepink); /* Warna latar belakang saat dihover */
+}
+label{
+    font-size: 18px; /* Mengatur ukuran font label menjadi lebih besar */
+    color:rgb(57, 52, 66);
+}
+
+.flex-1{
+    flex: 1;
+}
+.flex{
+    display: flex;
+}
+.items-centre{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-right{
+    justify-content: right;
+}
+

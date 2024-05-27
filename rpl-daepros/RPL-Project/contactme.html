@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="consme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="#" type="image/x-icon">
+    <title>Contact Me</title>
+</head>
+<body>
+    <section class="conme">
+        <header class="headcon flex justify-center">
+            <h1 class="cm"> Contact Me</h1>
+        </header>
+    </section>
+
+    <section class="formm flex-1">
+        <div class="form">
+            <img class="hey flex-1 justify-left"src="marin.jpg" alt="Gambar Contact Us" style="float:left; margin-right:20px;">
+            <form class="flex-1 justify-right" action="#" method="post">
+                <label for="nama">Name:</label><br>
+                <input type="text" id="nama" name="nama"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message...</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Send" style="float:right;">
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Mendapatkan elemen-elemen form
+        const form = document.getElementById('contactForm');
+        const namaInput = document.getElementById('nama');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+
+        // Menambahkan event listener untuk form saat disubmit
+        form.addEventListener('submit', function(event) {
+            // Memeriksa apakah pesan telah diisi
+            if (messageInput.value.trim() === '') {
+                // Mencegah pengiriman form jika pesan kosong
+                event.preventDefault();
+                // Menampilkan pesan kesalahan
+                alert('Message field cannot be empty!');
+            }
+        });
+    </script>
+</body>
+</html>
